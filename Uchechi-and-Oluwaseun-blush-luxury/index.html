@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Uchechi &amp; Oluwaseun — Wedding Invitation</title>
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Uchechi & Oluwaseun — You're Invited 💍">
+<meta property="og:description" content="Saturday 19th December 2026 — Ile-Ife, Osun State. Tap to open our wedding invitation">
+<meta property="og:image" content="preview.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Uchechi & Oluwaseun — You're Invited 💍">
+<meta name="twitter:description" content="Saturday 19th December 2026 — Ile-Ife, Osun State. Tap to open our wedding invitation">
+<meta name="twitter:image" content="preview.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Great+Vibes&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --ivory:#fff9f4;
+  --cream:#fdf3ec;
+  --blush:#f9e7e4;
+  --blush-2:#f3d4d1;
+  --blush-deep:#d99aa4;
+  --rose:#b76e79;
+  --rose-dark:#8e4c5a;
+  --rose-soft:#e8b7bd;
+  --gold:#bf9b5f;
+  --gold-dark:#9c7c3f;
+  --gold-light:#e3c98f;
+  --sage:#8a9560;
+  --olive:#5e6b3b;
+  --ink:#4f343a;
+  --shadow:0 30px 80px rgba(142,76,90,.22),0 10px 30px rgba(80,40,50,.10);
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html,body{width:100%;min-height:100vh;background:var(--cream);font-family:'Cormorant Garamond',Georgia,serif;color:var(--ink);overflow-x:hidden}
+body{
+  background:
+    radial-gradient(700px 500px at 15% -5%,rgba(217,154,164,.28),transparent 60%),
+    radial-gradient(700px 500px at 90% 10%,rgba(191,155,95,.16),transparent 55%),
+    radial-gradient(900px 700px at 50% 110%,rgba(217,154,164,.22),transparent 60%),
+    linear-gradient(180deg,#fff9f4 0%,#fbeee8 55%,#f9e7e4 100%);
+  background-attachment:fixed;
+}
+::selection{background:var(--rose-soft)}
+
+/* ---------- falling petals ---------- */
+.petal{position:absolute;top:-30px;width:16px;height:12px;background:linear-gradient(135deg,#f4cdd2,#df9aa7);border-radius:80% 0 80% 0;opacity:.0;pointer-events:none;animation:fall linear infinite;z-index:1}
+@keyframes fall{0%{transform:translate3d(0,-30px,0) rotate(0deg);opacity:0}10%{opacity:.75}90%{opacity:.6}100%{transform:translate3d(50px,105vh,0) rotate(340deg);opacity:0}}
+
+/* ---------- envelope (luxury velvet, inspired by fine stationery suites) ---------- */
+.envelope-screen{position:fixed;inset:0;z-index:100;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:22px;overflow:hidden;transition:opacity .8s ease .55s,visibility .8s ease .55s}
+.envelope-screen.opened{opacity:0;visibility:hidden;pointer-events:none}
+.env-frame{position:absolute;inset:13px;border:1px solid rgba(191,155,95,.55);border-radius:10px;pointer-events:none;z-index:1}
+.env-frame::before{content:'';position:absolute;inset:5px;border:1px solid rgba(217,154,164,.4);border-radius:7px}
+.env-eyebrow{font-family:'Inter',sans-serif;font-size:10px;letter-spacing:6px;text-transform:uppercase;color:var(--rose);font-weight:600;opacity:0;animation:fadeDown 1s ease .2s forwards;z-index:2}
+.env-script{font-family:'Great Vibes',cursive;font-size:clamp(38px,10vw,48px);font-weight:400;color:var(--rose-dark);line-height:1.15;margin-top:10px;opacity:0;animation:fadeDown 1s ease .35s forwards;z-index:2;text-shadow:0 2px 10px rgba(255,255,255,.7)}
+.env-line{width:92px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:13px 0 36px;opacity:0;animation:fadeIn 1s ease .6s forwards;z-index:2;position:relative}
+.env-line::after{content:'';position:absolute;left:50%;top:50%;width:7px;height:7px;background:var(--gold);transform:translate(-50%,-50%) rotate(45deg)}
+/* horizontal velvet envelope */
+.envelope{position:relative;width:min(370px,90vw);aspect-ratio:1.42/1;cursor:pointer;perspective:1400px;opacity:0;animation:fadeUp 1s ease .6s forwards;z-index:2;filter:drop-shadow(0 28px 34px rgba(120,65,75,.35))}
+.env-back{position:absolute;inset:0;border-radius:6px;background:radial-gradient(120% 90% at 20% 0%,rgba(255,255,255,.55),transparent 55%),radial-gradient(100% 100% at 90% 100%,rgba(150,90,95,.20),transparent 55%),linear-gradient(150deg,#f2d7d0 0%,#eac6bf 48%,#dfb3ac 100%);box-shadow:inset 0 0 0 1px rgba(156,124,63,.28),inset 0 0 34px rgba(183,110,121,.12)}
+.env-inside{position:absolute;top:0;left:0;width:100%;height:63%;z-index:1;clip-path:polygon(0 0,100% 0,50% 100%);background:linear-gradient(180deg,#fff6e8 0%,#efdcae 62%,#e3c98f 100%)}
+.env-letter{position:absolute;left:6%;right:6%;top:4%;bottom:7%;z-index:2;background:linear-gradient(180deg,#fffdf8,#fff7ee);border:1px solid rgba(191,155,95,.65);border-radius:4px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;box-shadow:0 8px 20px rgba(120,65,75,.16);transition:transform 1s cubic-bezier(.5,.05,.25,1) .35s}
+.env-letter-mono{font-family:'Great Vibes',cursive;font-size:38px;color:var(--rose-dark);line-height:1}
+.env-letter-line{width:52px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:5px 0}
+.env-letter-date{font-family:'Inter',sans-serif;font-size:8px;letter-spacing:3px;text-transform:uppercase;color:var(--gold-dark);font-weight:700}
+.env-pocket{position:absolute;inset:0;z-index:3;clip-path:polygon(0 30%,50% 64%,100% 30%,100% 100%,0 100%);background:radial-gradient(120% 100% at 50% 0%,rgba(255,255,255,.5),transparent 55%),linear-gradient(180deg,#f0d2cb 0%,#e7beb6 58%,#dda79f 100%);box-shadow:inset 0 0 0 1px rgba(156,124,63,.18);transition:opacity .7s ease .75s,transform .7s ease .75s}
+.vellum-band{position:absolute;left:0;right:0;top:53%;height:15%;z-index:4;background:linear-gradient(180deg,rgba(255,255,255,.52),rgba(255,255,255,.32));border-top:1px solid rgba(255,255,255,.65);border-bottom:1px solid rgba(255,255,255,.45);backdrop-filter:blur(1px);transition:opacity .6s ease .7s}
+.crest{position:absolute;left:50%;bottom:3.5%;transform:translateX(-50%);z-index:4;width:112px;text-align:center;color:var(--gold-dark);transition:opacity .6s ease .7s}
+.crest-mono{position:absolute;left:50%;top:40%;transform:translate(-50%,-50%);font-family:'Cormorant Garamond',serif;font-size:17px;letter-spacing:3px;font-weight:600;color:#8a6a25;text-shadow:0 1px 0 rgba(255,255,255,.65)}
+.crest-word{font-family:'Inter',sans-serif;font-size:7px;letter-spacing:4px;text-transform:uppercase;font-weight:700;color:#96742e;margin-top:1px}
+.envelope-flap{position:absolute;top:0;left:0;width:100%;height:63%;z-index:5;clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top center;transition:transform 1.15s cubic-bezier(.6,.05,.3,1);background:radial-gradient(120% 100% at 50% 0%,rgba(255,255,255,.65),transparent 58%),linear-gradient(180deg,#f6ddd6 0%,#eec9c2 58%,#e2b2aa 100%);filter:drop-shadow(0 3px 5px rgba(120,65,75,.25))}
+.wax-seal{position:absolute;top:57%;left:50%;transform:translate(-50%,-50%);width:68px;height:68px;border-radius:50%;z-index:6;display:flex;flex-direction:column;align-items:center;justify-content:center;background:radial-gradient(circle at 35% 30%,#f3dfa4 0%,var(--gold) 55%,#8a6a25 105%);box-shadow:0 7px 16px rgba(105,75,20,.45),inset -2px -3px 7px rgba(105,75,20,.4),inset 2px 2px 5px rgba(255,255,255,.6);transition:transform .5s ease .2s,opacity .5s ease .2s}
+.wax-seal::before{content:'';position:absolute;inset:4px;border-radius:50%;border:1px solid rgba(255,255,255,.55)}
+.wax-seal::after{content:'';position:absolute;inset:9px;border-radius:50%;border:1px dashed rgba(105,75,20,.35)}
+.wax-seal-text{font-family:'Great Vibes',cursive;color:#fff8e6;font-size:19px;line-height:1;text-shadow:0 1px 3px rgba(105,75,20,.6)}
+.envelope.opening .envelope-flap{transform:rotateX(-178deg)}
+.envelope.opening .wax-seal{transform:translate(-50%,-50%) scale(0) rotate(40deg);opacity:0}
+.envelope.opening .env-letter{transform:translateY(-52px)}
+.envelope.opening .env-pocket,.envelope.opening .vellum-band,.envelope.opening .crest{opacity:0;transform:translateY(12px)}
+.envelope.opening .crest{transform:translateX(-50%) translateY(12px)}
+.tap-hint{margin-top:36px;display:flex;flex-direction:column;align-items:center;gap:9px;opacity:0;animation:fadeUp 1s ease 1.15s forwards,bounce 2.2s ease-in-out 2.2s infinite;z-index:2}
+.tap-hint-icon{width:31px;height:31px;color:var(--rose-dark)}
+.tap-hint-text{font-family:'Inter',sans-serif;font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--rose-dark)}
+.env-date-line{margin-top:15px;font-family:'Inter',sans-serif;font-size:9px;letter-spacing:3.4px;text-transform:uppercase;color:var(--gold-dark);font-weight:600;opacity:0;animation:fadeUp 1s ease 1.3s forwards;z-index:2;text-align:center;line-height:2}
+
+
+/* ---------- invite layout ---------- */
+.invite-screen{min-height:100vh;width:100%;display:flex;justify-content:center;padding:28px 14px 44px;opacity:0;transform:translateY(46px);transition:opacity 1s ease .85s,transform 1s ease .85s}
+.invite-screen.visible{opacity:1;transform:translateY(0)}
+.invite-card{position:relative;width:100%;max-width:440px;background:linear-gradient(180deg,#fffdf9 0%,#fff8f1 60%,#fdf0ea 100%);border-radius:14px;overflow:hidden;box-shadow:var(--shadow)}
+.invite-frame{position:relative;margin:13px;border:1px solid rgba(191,155,95,.65);border-radius:9px;padding:40px 24px 30px;display:flex;flex-direction:column;align-items:center;text-align:center;overflow:hidden}
+.invite-frame::before{content:'';position:absolute;inset:6px;border:1px solid rgba(217,154,164,.45);border-radius:6px;pointer-events:none}
+.floral{position:absolute;width:150px;height:150px;opacity:.92;pointer-events:none;z-index:0}
+.floral.tl{top:-14px;left:-14px}
+.floral.tr{top:-14px;right:-14px;transform:scaleX(-1)}
+.floral.bl{bottom:-14px;left:-14px;transform:scaleY(-1)}
+.floral.br{bottom:-14px;right:-14px;transform:scale(-1)}
+.frame-content{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;width:100%}
+
+/* reveal on scroll */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:translateY(0)}
+
+.verse{font-style:italic;font-size:15px;line-height:1.65;color:var(--rose-dark);max-width:290px;font-weight:500}
+.verse-ref{display:block;font-style:normal;font-family:'Inter',sans-serif;font-size:10px;letter-spacing:2.5px;margin-top:6px;color:var(--gold-dark)}
+.eyebrow{font-family:'Inter',sans-serif;font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--rose);font-weight:600}
+.gold-rule{width:74px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:13px 0}
+.diamond{width:7px;height:7px;background:var(--gold);transform:rotate(45deg);margin:2px 0}
+
+/* hero photo — arch */
+.hero-photo{position:relative;width:min(280px,78vw);height:355px;margin:22px 0 6px;border-radius:170px 170px 12px 12px;padding:7px;background:linear-gradient(160deg,var(--gold-light),#fff2d9,var(--gold));box-shadow:0 18px 42px rgba(142,76,90,.28)}
+.hero-inner{position:relative;width:100%;height:100%;border-radius:163px 163px 8px 8px;overflow:hidden;background:radial-gradient(circle at 50% 28%,#fff 0%,var(--blush) 52%,var(--blush-2) 100%);display:flex;flex-direction:column;align-items:center;justify-content:center}
+.hero-inner img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.hero-mono{font-family:'Great Vibes',cursive;font-size:62px;color:var(--rose);line-height:1;text-shadow:0 2px 8px rgba(255,255,255,.8)}
+.hero-photo-hint{font-family:'Inter',sans-serif;font-size:8.5px;letter-spacing:2.6px;text-transform:uppercase;color:var(--rose-dark);margin-top:10px;padding:0 24px;line-height:1.8}
+.hero-date-chip{position:relative;margin-top:-20px;z-index:2;background:var(--ivory);border:1px solid var(--gold-light);border-radius:999px;padding:8px 18px;font-family:'Inter',sans-serif;font-size:10px;letter-spacing:2.6px;text-transform:uppercase;color:var(--rose-dark);box-shadow:0 8px 20px rgba(142,76,90,.18);font-weight:600}
+
+/* names with gold shimmer */
+.names{font-family:'Great Vibes',cursive;font-weight:400;font-size:clamp(56px,16vw,74px);line-height:1.02;margin:20px 0 4px;background:linear-gradient(100deg,var(--rose-dark) 5%,var(--rose) 30%,var(--gold-dark) 52%,#e8c987 58%,var(--gold-dark) 64%,var(--rose) 88%);background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shimmer 6s ease-in-out infinite}
+@keyframes shimmer{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+.names .amp{display:block;font-size:.52em;line-height:1.15;color:var(--gold-dark);-webkit-text-fill-color:var(--gold-dark)}
+.full-names{font-family:'Inter',sans-serif;font-size:9.5px;letter-spacing:2.6px;text-transform:uppercase;line-height:2;color:var(--rose-dark);font-weight:600;max-width:310px}
+.full-names span{color:var(--gold-dark)}
+
+/* countdown */
+.countdown{display:flex;gap:9px;margin:24px 0 4px}
+.cd-box{min-width:64px;padding:13px 6px 10px;border-radius:12px;background:rgba(255,255,255,.72);border:1px solid rgba(191,155,95,.55);box-shadow:0 8px 20px rgba(183,110,121,.12);backdrop-filter:blur(3px)}
+.cd-num{font-size:29px;font-weight:600;color:var(--rose-dark);line-height:1;font-variant-numeric:tabular-nums}
+.cd-label{font-family:'Inter',sans-serif;font-size:8.5px;letter-spacing:2.2px;text-transform:uppercase;color:var(--gold-dark);margin-top:6px;font-weight:600}
+.cd-live{font-style:italic;font-size:14px;color:var(--rose);margin-top:10px;min-height:18px}
+
+/* sections */
+.section{width:100%;margin-top:30px;display:flex;flex-direction:column;align-items:center}
+.section-title{font-family:'Great Vibes',cursive;font-size:36px;font-weight:400;color:var(--rose-dark);line-height:1.1}
+.family-intro{font-style:italic;font-size:14.5px;color:var(--ink);margin-top:14px}
+.family-block{font-size:15px;line-height:1.6;margin:7px 0;max-width:320px}
+.family-block strong{font-weight:600;color:var(--rose-dark)}
+.family-block .place{display:block;font-size:12.5px;color:var(--gold-dark);font-style:italic;margin-top:1px}
+.family-and{font-family:'Great Vibes',cursive;color:var(--blush-deep);font-size:25px;line-height:1;margin:2px 0}
+.presence{font-style:italic;font-size:14.5px;line-height:1.6;max-width:300px;margin-top:14px}
+.date-big{display:flex;align-items:center;gap:13px;color:var(--rose-dark);font-size:29px;font-weight:600;letter-spacing:1px;margin-top:8px}
+.date-big .div{color:var(--gold);font-weight:300;font-size:24px}
+.date-sub{font-family:'Inter',sans-serif;font-size:10.5px;letter-spacing:3.6px;text-transform:uppercase;color:var(--gold-dark);font-weight:600}
+
+/* timeline */
+.timeline{position:relative;width:100%;max-width:325px;margin-top:22px;padding-left:30px;text-align:left}
+.timeline::before{content:'';position:absolute;left:9px;top:8px;bottom:8px;width:1px;background:linear-gradient(180deg,var(--gold-light),var(--rose-soft),var(--gold-light))}
+.tl-item{position:relative;padding:0 0 26px}
+.tl-item:last-child{padding-bottom:2px}
+.tl-dot{position:absolute;left:-30px;top:5px;width:19px;height:19px;border-radius:50%;background:var(--ivory);border:1px solid var(--gold);display:flex;align-items:center;justify-content:center}
+.tl-dot::after{content:'';width:7px;height:7px;border-radius:50%;background:var(--rose)}
+.tl-time{font-family:'Inter',sans-serif;font-size:10px;letter-spacing:2.6px;text-transform:uppercase;color:var(--gold-dark);font-weight:700}
+.tl-title{font-size:21px;font-weight:600;color:var(--rose-dark);margin:3px 0 2px}
+.tl-venue{font-size:14.5px;line-height:1.55;color:var(--ink)}
+.tl-venue strong{color:var(--rose-dark)}
+.tl-map{display:inline-flex;align-items:center;gap:6px;margin-top:8px;font-family:'Inter',sans-serif;font-size:9.5px;letter-spacing:2px;text-transform:uppercase;font-weight:600;color:var(--rose-dark);text-decoration:none;border:1px solid var(--rose-soft);padding:7px 13px;border-radius:999px;background:#fff;transition:.25s}
+.tl-map:active,.tl-map:hover{background:var(--rose);color:#fff;border-color:var(--rose)}
+.tl-map svg{width:13px;height:13px}
+
+/* colour code */
+.swatches{display:flex;align-items:center;justify-content:center;gap:9px;font-size:15.5px;font-style:italic;margin-top:10px}
+.dot{width:19px;height:19px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(0,0,0,.12),0 2px 5px rgba(0,0,0,.18);flex:none}
+.dot-olive{background:#5e6b3b}.dot-pink{background:#e59cae}
+.dress-note{font-size:13px;font-style:italic;color:#7a5a61;margin-top:7px}
+
+/* buttons */
+.actions{display:flex;flex-direction:column;gap:11px;width:100%;max-width:295px;margin-top:20px}
+.action-btn{display:flex;align-items:center;justify-content:center;gap:11px;padding:13px 18px;border-radius:999px;border:1px solid var(--rose);background:transparent;color:var(--rose-dark);font-family:'Inter',sans-serif;font-size:10.5px;letter-spacing:2.6px;text-transform:uppercase;font-weight:600;cursor:pointer;text-decoration:none;transition:.3s;text-align:center}
+.action-btn svg{width:16px;height:16px;stroke-width:1.6;flex:none}
+.action-btn.primary{background:linear-gradient(120deg,var(--rose) 0%,var(--rose-dark) 50%,var(--gold-dark) 130%);color:#fff;border-color:transparent;box-shadow:0 10px 22px rgba(183,110,121,.35)}
+.action-btn:hover,.action-btn:active{transform:scale(.98);background:var(--rose);color:#fff}
+.action-btn.primary:hover,.action-btn.primary:active{background:linear-gradient(120deg,var(--rose-dark),var(--rose));color:#fff}
+.calendar-row{display:flex;gap:9px;width:100%;max-width:295px;margin-top:11px}
+.calendar-row .action-btn{flex:1;padding:11px 8px;font-size:9.5px;letter-spacing:1.8px}
+.buttons-hint{font-family:'Inter',sans-serif;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold-dark);margin-top:22px}
+
+.footer-note{font-size:11px;font-style:italic;color:#96626d;margin-top:22px;opacity:.9;line-height:1.7}
+.footer-mono{font-family:'Great Vibes',cursive;font-size:27px;color:var(--rose);margin-top:16px}
+
+/* floating music button */
+.music-btn{position:fixed;right:16px;bottom:16px;z-index:150;width:54px;height:54px;border-radius:50%;border:1px solid rgba(255,255,255,.8);background:linear-gradient(140deg,var(--rose),var(--rose-dark));color:#fff;box-shadow:0 12px 26px rgba(142,76,90,.42);display:none;align-items:center;justify-content:center;cursor:pointer}
+.music-btn.show{display:flex}
+.music-btn svg{width:23px;height:23px}
+.music-btn.playing{animation:pulse 1.8s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+
+/* modal */
+.modal-overlay{position:fixed;inset:0;background:rgba(79,40,50,.55);backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);display:flex;align-items:flex-end;justify-content:center;z-index:200;opacity:0;visibility:hidden;transition:.3s}
+.modal-overlay.visible{opacity:1;visibility:visible}
+.modal{width:100%;max-width:440px;background:linear-gradient(180deg,#fffdf9,#fdf0ea);border-radius:22px 22px 0 0;padding:26px 24px 32px;transform:translateY(100%);transition:transform .42s cubic-bezier(.4,0,.2,1);box-shadow:0 -20px 60px rgba(0,0,0,.25)}
+.modal-overlay.visible .modal{transform:translateY(0)}
+.modal-handle{width:42px;height:4px;background:var(--rose-soft);border-radius:4px;margin:0 auto 20px}
+.modal-title{text-align:center;font-family:'Great Vibes',cursive;font-size:35px;color:var(--rose-dark);font-weight:400}
+.modal-subtitle{text-align:center;font-family:'Inter',sans-serif;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold-dark);margin:4px 0 20px;font-weight:600}
+.contact-row{display:flex;align-items:center;justify-content:space-between;padding:14px 4px;border-bottom:1px solid rgba(183,110,121,.2)}
+.contact-row:last-of-type{border-bottom:none}
+.contact-info{display:flex;flex-direction:column;gap:2px;text-align:left}
+.contact-name{font-size:17px;font-weight:600;color:var(--rose-dark)}
+.contact-number{font-family:'Inter',sans-serif;font-size:12px;color:#96626d;letter-spacing:.4px}
+.contact-actions{display:flex;gap:8px}
+.icon-btn{width:42px;height:42px;border-radius:50%;border:1px solid var(--rose);background:transparent;display:flex;align-items:center;justify-content:center;color:var(--rose-dark);text-decoration:none;transition:.25s}
+.icon-btn:active,.icon-btn:hover{background:var(--rose);color:#fff;transform:scale(.95)}
+.icon-btn svg{width:19px;height:19px;stroke-width:1.6}
+.modal-close{width:100%;margin-top:20px;padding:12px;border:1px solid var(--rose-soft);border-radius:999px;background:transparent;color:var(--rose-dark);font-family:'Inter',sans-serif;font-size:10.5px;letter-spacing:3px;text-transform:uppercase;cursor:pointer;font-weight:600}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeDown{from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@media(max-width:380px){.invite-frame{padding:32px 17px 24px}.cd-box{min-width:58px}.date-big{font-size:25px}.floral{width:118px;height:118px}}
+</style>
+</head>
+<body>
+
+<!-- ============ ENVELOPE (luxury velvet suite) ============ -->
+<div class="envelope-screen" id="envelopeScreen">
+  <div class="env-frame"></div>
+  <div class="env-eyebrow">The Wedding Of</div>
+  <div class="env-script">Uchechi &amp; Oluwaseun</div>
+  <div class="env-line"></div>
+
+  <div class="envelope" id="envelope" onclick="openEnvelope()">
+    <div class="env-back"></div>
+    <div class="env-inside"></div>
+    <div class="env-letter">
+      <div class="env-letter-mono">U &amp; O</div>
+      <div class="env-letter-line"></div>
+      <div class="env-letter-date">19 &middot; 12 &middot; 2026</div>
+    </div>
+    <div class="env-pocket"></div>
+    <div class="vellum-band"></div>
+    <div class="crest"><svg viewBox="0 0 120 74" width="112" height="70" aria-hidden="true"><g fill="none" stroke="#b08c46" stroke-width="1.4"><path d="M40 66 C22 56 15 34 25 13"/><path d="M80 66 C98 56 105 34 95 13"/></g><g fill="#c6a15b"><ellipse cx="29" cy="24" rx="6" ry="3" transform="rotate(-42 29 24)"/><ellipse cx="24" cy="38" rx="6" ry="3" transform="rotate(-68 24 38)"/><ellipse cx="30" cy="52" rx="6" ry="3" transform="rotate(-96 30 52)"/><ellipse cx="91" cy="24" rx="6" ry="3" transform="rotate(42 91 24)"/><ellipse cx="96" cy="38" rx="6" ry="3" transform="rotate(68 96 38)"/><ellipse cx="90" cy="52" rx="6" ry="3" transform="rotate(96 90 52)"/><circle cx="52" cy="66" r="3.2"/><circle cx="60" cy="69" r="3.8"/><circle cx="68" cy="66" r="3.2"/></g></svg><div class="crest-mono">U | O</div><div class="crest-word">The Wedding</div></div>
+    <div class="envelope-flap"></div>
+    <div class="wax-seal">
+      <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="#fff3d0" stroke-width="1.6" stroke-linecap="round"><path d="M12 21 V9"/><path d="M12 9 C12 5 9 3 5 3 C5 7 8 9 12 9Z"/><path d="M12 13 C12 9 15 7 19 7 C19 11 16 13 12 13Z"/></svg>
+      <div class="wax-seal-text">U&amp;O</div>
+    </div>
+  </div>
+
+  <div class="tap-hint">
+    <svg class="tap-hint-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11V6a2 2 0 0 1 4 0v5"/><path d="M9 11v6a3 3 0 0 0 6 0v-4"/><path d="M5 13v2a7 7 0 0 0 14 0v-3"/></svg>
+    <div class="tap-hint-text">Tap to open</div>
+  </div>
+  <div class="env-date-line">Saturday &middot; 19 December 2026 &middot; Ile-Ife</div>
+</div>
+
+<!-- ============ INVITE ============ -->
+<div class="invite-screen" id="inviteScreen">
+  <div class="invite-card">
+    <div class="invite-frame">
+
+      <!-- floral corners -->
+      <svg class="floral tl" viewBox="0 0 200 200" aria-hidden="true"><g fill="#e8aebd"><ellipse cx="42" cy="26" rx="17" ry="9" transform="rotate(-38 42 26)"/><ellipse cx="66" cy="18" rx="15" ry="8" transform="rotate(-8 66 18)"/><ellipse cx="24" cy="52" rx="15" ry="8" transform="rotate(-70 24 52)"/><circle cx="48" cy="34" r="7" fill="#bf9b5f"/></g><g fill="#d98f9e"><circle cx="88" cy="42" r="8"/><circle cx="34" cy="86" r="7"/></g><path d="M6 118 Q42 84 92 76 Q48 116 6 118Z" fill="#9aa873"/><path d="M118 6 Q84 42 76 92 Q116 48 118 6Z" fill="#8a9560"/><g fill="#e3c98f"><circle cx="106" cy="24" r="3"/><circle cx="24" cy="106" r="3"/><circle cx="74" cy="60" r="2.5"/></g></svg>
+      <svg class="floral tr" viewBox="0 0 200 200" aria-hidden="true"><g fill="#e8aebd"><ellipse cx="42" cy="26" rx="17" ry="9" transform="rotate(-38 42 26)"/><ellipse cx="66" cy="18" rx="15" ry="8" transform="rotate(-8 66 18)"/><ellipse cx="24" cy="52" rx="15" ry="8" transform="rotate(-70 24 52)"/><circle cx="48" cy="34" r="7" fill="#bf9b5f"/></g><path d="M6 118 Q42 84 92 76 Q48 116 6 118Z" fill="#9aa873"/><path d="M118 6 Q84 42 76 92 Q116 48 118 6Z" fill="#8a9560"/></svg>
+      <svg class="floral bl" viewBox="0 0 200 200" aria-hidden="true"><g fill="#e8aebd"><ellipse cx="42" cy="26" rx="17" ry="9" transform="rotate(-38 42 26)"/><ellipse cx="66" cy="18" rx="15" ry="8" transform="rotate(-8 66 18)"/><ellipse cx="24" cy="52" rx="15" ry="8" transform="rotate(-70 24 52)"/><circle cx="48" cy="34" r="7" fill="#bf9b5f"/></g><path d="M6 118 Q42 84 92 76 Q48 116 6 118Z" fill="#9aa873"/><path d="M118 6 Q84 42 76 92 Q116 48 118 6Z" fill="#8a9560"/></svg>
+      <svg class="floral br" viewBox="0 0 200 200" aria-hidden="true"><g fill="#e8aebd"><ellipse cx="42" cy="26" rx="17" ry="9" transform="rotate(-38 42 26)"/><ellipse cx="66" cy="18" rx="15" ry="8" transform="rotate(-8 66 18)"/><ellipse cx="24" cy="52" rx="15" ry="8" transform="rotate(-70 24 52)"/><circle cx="48" cy="34" r="7" fill="#bf9b5f"/></g><path d="M6 118 Q42 84 92 76 Q48 116 6 118Z" fill="#9aa873"/><path d="M118 6 Q84 42 76 92 Q116 48 118 6Z" fill="#8a9560"/></svg>
+
+      <div class="frame-content">
+
+        <p class="verse reveal">"The Lord has done great things for us, and we are filled with joy."
+          <span class="verse-ref">— PSALM 126:3</span></p>
+
+        <div class="gold-rule reveal"></div>
+        <p class="eyebrow reveal">Together with their families</p>
+
+        <!-- PHOTO: replace couple.jpg with your own photo -->
+        <div class="hero-photo reveal">
+          <div class="hero-inner">
+            <div class="hero-mono">U &amp; O</div>
+            <div class="hero-photo-hint">Our Photo<br>Coming Soon</div>
+            <img src="couple.jpg" alt="Uchechi and Oluwaseun" onerror="this.remove()">
+          </div>
+        </div>
+        <div class="hero-date-chip reveal">Sat · 19 Dec 2026 · Ile-Ife</div>
+
+        <h1 class="names reveal">Uchechi <span class="amp">&amp;</span> Oluwaseun</h1>
+        <p class="full-names reveal">Uchechi Clara Manus <span>&amp;</span> Oluwaseun Lewis Ayodele</p>
+
+        <!-- countdown -->
+        <div class="countdown reveal" id="countdown">
+          <div class="cd-box"><div class="cd-num" id="cdD">—</div><div class="cd-label">Days</div></div>
+          <div class="cd-box"><div class="cd-num" id="cdH">—</div><div class="cd-label">Hours</div></div>
+          <div class="cd-box"><div class="cd-num" id="cdM">—</div><div class="cd-label">Mins</div></div>
+          <div class="cd-box"><div class="cd-num" id="cdS">—</div><div class="cd-label">Secs</div></div>
+        </div>
+        <p class="cd-live reveal" id="cdLive"></p>
+
+        <!-- families -->
+        <div class="section reveal">
+          <h2 class="section-title">The Families</h2>
+          <div class="diamond"></div>
+          <p class="family-intro">The families of</p>
+
+          <div class="family-block">
+            <strong>Pa Emmanuel Ayodele &amp; Mrs Oluwatoyin Ayodele</strong>
+            <span class="place">Osun State</span>
+          </div>
+          <div class="family-and">&amp;</div>
+          <div class="family-block">
+            <strong>Professor Christopher Ukachukwu Manus &amp; Late Mrs Mercy Chinyere Manus</strong>
+          </div>
+          <p class="presence">request your presence at the Holy Solemnization of their children</p>
+
+          <p class="date-sub" style="margin-top:22px">Saturday</p>
+          <div class="date-big"><span>19</span><span class="div">|</span><span>DEC</span><span class="div">|</span><span>2026</span></div>
+        </div>
+
+        <!-- programme timeline -->
+        <div class="section reveal">
+          <h2 class="section-title">Order of the Day</h2>
+          <div class="diamond"></div>
+
+          <div class="timeline">
+            <div class="tl-item">
+              <div class="tl-dot"></div>
+              <p class="tl-time">10:00 AM — White Wedding</p>
+              <h3 class="tl-title">Our Lady of Perpetual Light</h3>
+              <p class="tl-venue">Obafemi Awolowo University, Ile-Ife, Osun State</p>
+              <a class="tl-map" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Our+Lady+of+Perpetual+Light+Obafemi+Awolowo+University+Ile-Ife+Osun+State">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Open in Maps
+              </a>
+            </div>
+
+            <div class="tl-item">
+              <div class="tl-dot"></div>
+              <p class="tl-time">1:00 PM — Traditional Wedding</p>
+              <h3 class="tl-title">Ojaja Grand Resort &amp; Leisure</h3>
+              <p class="tl-venue">KM 4, Ibadan-Ile-Ife Road, Ile-Ife, Osun State</p>
+              <a class="tl-map" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Ojaja+Grand+Resort+and+Leisure+KM+4+Ibadan-Ile-Ife+Road+Ile-Ife+Osun+State">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Open in Maps
+              </a>
+            </div>
+
+            <div class="tl-item">
+              <div class="tl-dot"></div>
+              <p class="tl-time">Immediately After — Reception</p>
+              <h3 class="tl-title">Reception</h3>
+              <p class="tl-venue">Follows immediately at same venue — <strong>Ojaja Grand Resort &amp; Leisure</strong></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- colour code -->
+        <div class="section reveal">
+          <h2 class="section-title">Colour Code</h2>
+          <div class="diamond"></div>
+          <div class="swatches">
+            <span class="dot dot-olive"></span><span class="dot dot-pink"></span>
+            <span>Olive Green &amp; Pink</span>
+          </div>
+          <p class="dress-note">Kindly honour us in our colours of the day</p>
+        </div>
+
+        <!-- actions -->
+        <p class="buttons-hint reveal">Tap the buttons below</p>
+        <div class="actions reveal">
+          <button class="action-btn primary" onclick="openModal('rsvp')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            RSVP — Kindly Respond
+          </button>
+          <button class="action-btn" onclick="openModal('call')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call Us
+          </button>
+        </div>
+        <div class="calendar-row reveal">
+          <a class="action-btn" target="_blank" rel="noopener" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Uchechi+%26+Oluwaseun+Wedding&dates=20261219T090000Z/20261219T170000Z&details=White+Wedding+10AM%3A+Our+Lady+of+Perpetual+Light%2C+OAU+Ile-Ife.%0ATraditional+1PM+%2B+Reception%3A+Ojaja+Grand+Resort+%26+Leisure%2C+KM+4+Ibadan-Ile-Ife+Road%2C+Ile-Ife.&location=Ojaja+Grand+Resort+%26+Leisure%2C+Ile-Ife%2C+Osun+State">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Google Cal
+          </a>
+          <button class="action-btn" onclick="downloadICS()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Save Date .ics
+          </button>
+        </div>
+
+        <div class="footer-mono reveal">Uchechi &amp; Oluwaseun</div>
+        <p class="footer-note reveal">We can't wait to celebrate with you.<br>This card does not grant access to the event.</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- floating music: YOUR song (blank slot — add music.mp3) -->
+<!-- ===== YOUR MUSIC: add your audio file named music.mp3 in this folder ===== -->
+<audio id="bgMusic" src="Moses_Bliss_-_For_Life_CeeNaija.com_.mp3" loop preload="auto"></audio>
+<button class="music-btn show" id="musicBtn" onclick="toggleMusic(event)" aria-label="Stop or play music">
+  <svg id="musicIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+</button>
+
+<!-- ============ MODAL ============ -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModalIfBackdrop(event)">
+  <div class="modal">
+    <div class="modal-handle"></div>
+    <h3 class="modal-title" id="modalTitle">RSVP</h3>
+    <p class="modal-subtitle" id="modalSubtitle">Kindly respond</p>
+
+    <div class="contact-row">
+      <div class="contact-info">
+        <div class="contact-name">Ngozi Manus</div>
+        <div class="contact-number">0803 387 1946</div>
+      </div>
+      <div class="contact-actions" id="actionsNgozi"></div>
+    </div>
+
+    <div class="contact-row">
+      <div class="contact-info">
+        <div class="contact-name">Olawole Ayodele</div>
+        <div class="contact-number">0803 810 8884</div>
+      </div>
+      <div class="contact-actions" id="actionsOlawole"></div>
+    </div>
+
+    <button class="modal-close" onclick="closeModal()">Close</button>
+  </div>
+</div>
+
+<script>
+/* petals */
+(function(){
+  const host=document.getElementById('envelopeScreen');
+  for(let i=0;i<14;i++){
+    const p=document.createElement('span'); p.className='petal';
+    p.style.left=(Math.random()*100)+'vw';
+    p.style.animationDuration=(7+Math.random()*7)+'s';
+    p.style.animationDelay=(Math.random()*6)+'s';
+    p.style.transform='scale('+(0.7+Math.random()*0.9)+')';
+    host.appendChild(p);
+  }
+})();
+
+/* envelope */
+function openEnvelope(){
+  const e=document.getElementById('envelope');
+  if(e.classList.contains('opening'))return;
+  e.classList.add('opening');
+  setTimeout(()=>{
+    document.getElementById('envelopeScreen').classList.add('opened');
+    document.getElementById('inviteScreen').classList.add('visible');
+    document.body.style.overflow='auto';
+    window.scrollTo({top:0,behavior:'instant'});
+    initReveals();
+  },900);
+}
+document.body.style.overflow='hidden';
+
+/* scroll reveals */
+let revealObserver=null;
+function initReveals(){
+  const items=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){items.forEach(el=>el.classList.add('in'));return;}
+  revealObserver=new IntersectionObserver(entries=>{
+    entries.forEach(en=>{if(en.isIntersecting){en.target.classList.add('in');revealObserver.unobserve(en.target);}});
+  },{threshold:0.12});
+  items.forEach(el=>revealObserver.observe(el));
+}
+
+/* countdown to Sat 19 Dec 2026, 10:00 AM WAT (UTC+1) */
+const target=new Date('2026-12-19T10:00:00+01:00').getTime();
+function pad(n){return String(n).padStart(2,'0');}
+function tickCountdown(){
+  const diff=target-Date.now();
+  const live=document.getElementById('cdLive');
+  if(diff<=0){
+    document.getElementById('cdD').textContent='0';document.getElementById('cdH').textContent='00';
+    document.getElementById('cdM').textContent='00';document.getElementById('cdS').textContent='00';
+    live.textContent='Today is the day — we are getting married! 🎉'; return;
+  }
+  const d=Math.floor(diff/86400000),h=Math.floor(diff/3600000)%24,m=Math.floor(diff/60000)%60,s=Math.floor(diff/1000)%60;
+  document.getElementById('cdD').textContent=d;document.getElementById('cdH').textContent=pad(h);
+  document.getElementById('cdM').textContent=pad(m);document.getElementById('cdS').textContent=pad(s);
+  live.textContent=d===1?'Just 1 day to go!':d<=30?'The countdown is on — '+d+' days to go!':'Counting down to our big day';
+}
+tickCountdown(); setInterval(tickCountdown,1000);
+
+/* add to calendar (.ics) */
+function downloadICS(){
+  const ics=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//UchechiOluwaseun//Wedding//EN','BEGIN:VEVENT',
+  'UID:uchechi-oluwaSeun-20261219@wedding','DTSTAMP:20261013T100000Z','DTSTART:20261219T090000Z','DTEND:20261219T170000Z',
+  'SUMMARY:Uchechi & Oluwaseun Wedding',
+  'DESCRIPTION:White Wedding 10:00 AM: Our Lady of Perpetual Light\\, Obafemi Awolowo University\\, Ile-Ife. Traditional Wedding 1:00 PM + Reception: Ojaja Grand Resort & Leisure\\, KM 4 Ibadan-Ile-Ife Road\\, Ile-Ife. Colour Code: Olive Green & Pink.',
+  'LOCATION:Ojaja Grand Resort & Leisure\\, KM 4 Ibadan-Ile-Ife Road\\, Ile-Ife\\, Osun State','END:VEVENT','END:VCALENDAR'].join('\r\n');
+  const url=URL.createObjectURL(new Blob([ics],{type:'text/calendar'}));
+  const a=document.createElement('a'); a.href=url; a.download='Uchechi-and-Oluwaseun-Wedding.ics'; document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(()=>URL.revokeObjectURL(url),1500);
+}
+
+/* ---- YOUR MUSIC (blank slot) ----
+   Add YOUR audio file in this same folder and name it exactly:  music.mp3
+   - It starts playing automatically when the page loads.
+   - Tapping the music icon stops it; tapping again plays it.
+   NOTE: Phones/browsers block sound before any touch, so if autoplay is
+   blocked it will start on the guest's first tap (opening the envelope). */
+const bgMusic = document.getElementById('bgMusic');
+const musicBtn = document.getElementById('musicBtn');
+let musicWanted = true;
+function setMusicUI(playing){
+  musicBtn.classList.toggle('playing', playing);
+}
+function tryPlayMusic(){
+  if(!musicWanted || !bgMusic) return;
+  const promise = bgMusic.play();
+  if(promise){ promise.then(()=>setMusicUI(true)).catch(()=>{}); }
+}
+window.addEventListener('load', tryPlayMusic);
+document.addEventListener('DOMContentLoaded', tryPlayMusic);
+document.addEventListener('pointerdown', function(e){
+  if(e.target.closest && e.target.closest('#musicBtn')) return;
+  if(musicWanted && bgMusic && bgMusic.paused) tryPlayMusic();
+});
+function toggleMusic(e){
+  if(e) e.stopPropagation();
+  if(!bgMusic) return;
+  if(bgMusic.paused){
+    musicWanted = true;
+    bgMusic.play().then(()=>setMusicUI(true)).catch(()=>setMusicUI(false));
+  } else {
+    musicWanted = false;
+    bgMusic.pause();
+    setMusicUI(false);
+  }
+}
+if(bgMusic){
+  bgMusic.addEventListener('play', ()=>setMusicUI(true));
+  bgMusic.addEventListener('pause', ()=>{ if(!musicWanted) setMusicUI(false); });
+}
+
+/* ---- RSVP / Call modal ---- */
+const contacts={
+  Ngozi:{tel:'+2348033871946',wa:'2348033871946'},
+  Olawole:{tel:'+2348038108884',wa:'2348038108884'}
+};
+const iconWA=`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>`;
+const iconPh=`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>`;
+function buildActions(name,mode){
+  const c=contacts[name];
+  if(mode==='call') return `<a class="icon-btn" href="tel:${c.tel}" aria-label="Call ${name}">${iconPh}</a>`;
+  return `<a class="icon-btn" href="https://wa.me/${c.wa}?text=${encodeURIComponent('Hello '+name+', I would like to RSVP for Uchechi & Oluwaseun\u2019s wedding.')}" target="_blank" rel="noopener" aria-label="WhatsApp ${name}">${iconWA}</a><a class="icon-btn" href="tel:${c.tel}" aria-label="Call ${name}">${iconPh}</a>`;
+}
+function openModal(mode){
+  const t=document.getElementById('modalTitle'),s=document.getElementById('modalSubtitle');
+  if(mode==='call'){t.textContent='Call Us';s.textContent='Choose who to call';}else{t.textContent='RSVP';s.textContent='Kindly respond';}
+  document.getElementById('actionsNgozi').innerHTML=buildActions('Ngozi',mode);
+  document.getElementById('actionsOlawole').innerHTML=buildActions('Olawole',mode);
+  document.getElementById('modalOverlay').classList.add('visible'); document.body.style.overflow='hidden';
+}
+function closeModal(){document.getElementById('modalOverlay').classList.remove('visible');document.body.style.overflow='auto';}
+function closeModalIfBackdrop(e){if(e.target.id==='modalOverlay')closeModal();}
+</script>
+</body>
+</html>
